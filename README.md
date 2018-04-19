@@ -1,4 +1,4 @@
-# guardian/clj
+# guardian-clj
 
 Clojure project for checking health on several services.
 
@@ -7,5 +7,9 @@ Clojure project for checking health on several services.
 * Define services with .yaml files.
 * Define connectors with .yaml files. Connectors are used for sending alarms to several targets (email, slack, telegram...)
 * Stores information internally with SQLite.
-* Admin Dashboard made with reagent with all the services and its data.
+* Admin Dashboard made with reagent with all the services and its data (https://github.com/multunus/dashboard-clj). 
 * Real time data.
+
+## Building guardian-clj
+
+## Deploying guardian-clj
