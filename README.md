@@ -4,8 +4,8 @@ Clojure project for checking health on several services.
 
 ## Features
 
-* Define services with .yaml files.
-* Define connectors with .yaml files. Connectors are used for sending alarms to several targets (email, slack, telegram...)
+* Define services with .edn files.
+* Define connectors with .edn files. Connectors are used for sending alarms to several targets (email, slack, telegram...)
 * Stores information internally with SQLite.
 * Admin Dashboard made with reagent with all the services and its data (https://github.com/multunus/dashboard-clj).
 * Real time data.
