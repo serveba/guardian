@@ -1,22 +1,14 @@
 # Guardian
 
-Golang project for checking health on several services.
+Project for health-checking different services (datasources) configured through forms or yaml files. The healthchecks can be connected to several appenders in order to send notifications when something bad happens.
 
 ## Features
 
-* **Connectors**; endpoints and datasources we want to monitor.
-* **Channels**; Those objects are used to abstract the concept of sending alarms through several services (email, slack, telegram...)
+* **Datasource**; endpoints and datasources we want to monitor.
+* **Appender**; Those objects are used to abstract the concept of sending alarms through several services (slack, email, telegram...)
 * Stores information internally with SQLite.
-* Admin Dashboard made with reagent with all the services and its data.
+* Admin Dashboard made with datatables and bootstrap all the datasources and its healthchecks.
 * Real time data.
-
-## Roadmap
-
-We have a public Trello board to see the current development status regarding features:
-
-https://trello.com/b/96ncBgpS/guardian
-
-Bugs and feature requests will be addressed through issues.
 
 ## Building guardian
 
@@ -35,22 +27,24 @@ In the guardian project we can have several type of services to check. For now w
 
 We are going to describe the structure of the different services through this document.
 
-### Datasource
+### Datasources
 
 A datasource has the following data attributes:
 
-* **type**: this is the supported database type, for now we support 'postgresql', 'mysql' and 'mongodb'.
-* **user**
-* **password**
-* **connection_url**
-* **frequency**: integer number in seconds, i.e: 120 -> every 2 minutes we make a connection ping to see if its working
+* **datasource_type**: this is the supported database type, for now we support 'postgresql', 'mysql' and 'mongodb'.
+* **polling_frequency**: integer number in seconds, i.e: 120 -> every 2 minutes we make a connection ping to see if its working
 * **warning_timeout**: the max time in seconds it takes to consider a warning
 * **error_timeout**: the max time in seconds it takes to consider bad behaviour.
 
-### Endpoint
+### Appenders
 
 * **type**: this is the supported endpoint type, for now we support 'rest'.
-* **connection_url**
-* **frequency**: integer number in seconds, i.e: 120 -> every 2 minutes we make a request to see if its working
-* **warning_timeout**: the max time in seconds it takes to consider a warning
-* **error_timeout**: the max time in seconds it takes to consider bad behaviour.
+
+
+## Roadmap
+
+We have a public Trello board to see the current development status regarding features:
+
+https://trello.com/b/96ncBgpS/guardian
+
+Bugs and feature requests will be addressed through issues.
