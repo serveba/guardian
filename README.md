@@ -1,6 +1,6 @@
-# guardian-clj
+# Guardian
 
-Clojure project for checking health on several services.
+Golang project for checking health on several services.
 
 ## Features
 
@@ -14,21 +14,21 @@ Clojure project for checking health on several services.
 
 We have a public Trello board to see the current development status regarding features:
 
-https://trello.com/b/paG9xR96/guardian-clj
+https://trello.com/b/96ncBgpS/guardian
 
 Bugs and feature requests will be addressed through issues.
 
-## Building guardian-clj
+## Building guardian
 
 TODO
 
-## Deploying guardian-clj
+## Deploying guardian
 
 TODO
 
 ## Connectors
 
-In the guardian-clj project we can have several type of services to check. For now we have the following ones:
+In the guardian project we can have several type of services to check. For now we have the following ones:
 
 * **Datasource**: This service abstracts a database service. We can check the connection of the database.
 * **Endpoint**: This service abstracts a typical REST/SOAP service endpoint. Through this kind of service we can make request to some status endpoint to see if the service responds correctly, for example: HTTP 200 code, less time than some fixed value...
